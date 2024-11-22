@@ -11,7 +11,7 @@ const ChildrenItem = ({ menuItem, onChangeData, link }) => {
         <div className='w-[230px]'>
             {
                 menuItem?.map((item, i) => {
-                    return <div key={i} className={`flex justify-between items-center py-1 group ${link === removeFirstSlash(item?.link) ? 'text-[#F97316]' : ''}`}
+                    return <div key={i} className={`flex justify-between items-center py-1 group font-inter ${link === removeFirstSlash(item?.link) ? 'text-[#F97316]' : ''}`}
                         onMouseEnter={() => { onChangeData(item?.childrens, item?.link) }}
                     >
                         <Link href={item?.link} className='text-sm'>{item?.title}</Link>
