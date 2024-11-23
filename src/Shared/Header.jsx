@@ -87,7 +87,6 @@ function Header() {
         </div>
       </div>
       <div onClick={() => setShowModal(false)} className='bg-red-100 h-screen w-full opacity-0 absolute'>
-        smhegfawhegf
       </div>
     </header>
   );
