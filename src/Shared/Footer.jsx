@@ -2,11 +2,13 @@ import FacebookIcon from '@/components/Icon/FacebookIcon';
 import InstargamIcon from '@/components/Icon/InstagramIcon';
 import LinkedinIcon from '@/components/Icon/LinkedinIcon';
 import WhatsAppIcon from '@/components/Icon/WhatsAppIcon';
+import image from "@/assets/images/alfaz2.png"
+import Image from 'next/image';
 import React from 'react';
 
 const Footer = () => {
     return (
-        <div className='bg-white relative'>
+        <div className='bg-white'>   
 
             <hr />
 
@@ -14,13 +16,8 @@ const Footer = () => {
 
                 <div className='mb-6 pb-5 ml-5'>
                     <div className='flex py-3 mt-5'>
-                        <h1 className='font-semibold text-2xl'>Name</h1>
+                        <Image src={image} height={100} width={129} alt='fjghdius' className='h-[45px] w-[129px]' onClick={() => setShowModal(!showModal)} />
                     </div>
-                    <p className="pt-1">Alzaf Shop is an Online Shopping Mall .</p>
-                    <p>in Bangladesh We deliver various types of Unique &</p>
-                    <p> Quality products all over Bangladesh.</p>
-
-
                     <div className="mt-">
                         <h1 className="font-semibold text-xl py-2">See Our New Updates</h1>
                         <div className="flex gap-3">
