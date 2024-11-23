@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div>
       <Layout>
-        <Image src={HeroImage} className="h-[291px] w-full" alt="dfyhbtf" height={1000} width={1000}/>
+        <Image src={HeroImage} className="h-[291px] w-full z-30" alt="dfyhbtf" height={1000} width={1000}/>
       </Layout>
     </div>
 

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 function TopHeader() {
   return (
-    <header className='top-0 sticky py-1 bg-[#F0F1F1] z-50'>
+    <header className='top-0 sticky py-1 bg-[#F0F1F1] z-50 hidden lg:block'>
       <div className='flex justify-between items-center px-5 md:px-16 pl:px-28 xl:px-26 2xl:px-56'>
         <div className='flex justify-start items-center gap-5 text-xs'>
           <Link href={`/`} className='text-[#F97316] flex justify-start items-center gap-2'>

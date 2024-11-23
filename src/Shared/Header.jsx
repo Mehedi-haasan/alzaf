@@ -53,29 +53,29 @@ function Header() {
 
 
   return (
-    <header className='top-0 lg:top-[34px] sticky bg-[#FFFFFF] z-50 pb-2'>
-      <div className='flex justify-between items-center gap-8 px-5 md:px-16 pl:px-28 xl:px-26 2xl:px-56'>
+    <header className='top-0 lg:top-[24px] sticky bg-[#FFFFFF] z-50 py-2'>
+      <div className='flex justify-between items-center gap-4 md:gap-5 lg:gap-8 px-2 md:px-16 pl:px-28 xl:px-26 2xl:px-56 z-50 bg-[#FFFFFF]'>
         <div>
-          <Image src={image} height={100} width={129} alt='fjghdius' className='h-[38px] w-[129px]' />
+          <Image src={image} height={100} width={129} alt='fjghdius' className='h-[38px] w-[129px]' onClick={() => setShowModal(!showModal)} />
         </div>
         <div className='relative w-full'>
-          <input placeholder='Search Product' className='bg-[#EFF0F5] rounded-lg h-[44px] w-full py-[11px] px-3 focus:outline-none' />
-          <SearchIcon className='absolute top-0 right-0' />
+          <input placeholder='Search Product' className='bg-[#EFF0F5] rounded-lg h-[36px] lg:h-[44px] w-full py-[7px] lg:py-[11px] px-1.5 lg:px-3 focus:outline-none' />
+          <SearchIcon className='absolute top-0 right-[-3px] lg:right-0 h-[36px] lg:h-[44px]' />
         </div>
         <div>
           <CartIcon className='' />
         </div>
-        <div>
+        <div className='hidden lg:block'>
           <CloudServiceIcon />
         </div>
       </div>
-      <div className='px-5 md:px-16 pl:px-28 xl:px-26 2xl:px-56 relative'>
-        <div className='absolute p-2'>
+      <div className='px-5 md:px-16 pl:px-28 xl:px-26 2xl:px-56 relative z-40'>
+        <div className='absolute p-2 z-40'>
           {
-            showModal && data?.length > 0 && <div ref={divRef} className='flex justify-start gap-2 bg-white p-2.5'>
+            showModal && data?.length > 0 && <div className='flex justify-start gap-2 bg-white p-2.5'>
               {data && data?.length > 0 && <ChildrenItem menuItem={data} onChangeData={(childrens, links) => { setChilderen(childrens); LinkSetup(links) }} link={link?.[0]} />}
 
-              {children && children?.length > 0 && <ChildrenItem menuItem={children} onChangeData={(childrens, links) => { setSubChilderen(childrens); LinkSetup(links) }} link={`${link?.[0]}/${link?.[1]}`}  />}
+              {children && children?.length > 0 && <ChildrenItem menuItem={children} onChangeData={(childrens, links) => { setSubChilderen(childrens); LinkSetup(links) }} link={`${link?.[0]}/${link?.[1]}`} />}
 
               {children && subChildren && subChildren?.length > 0 && <ChildrenItem menuItem={subChildren} onChangeData={(childrens, links) => { setSubSubChilderen(childrens); LinkSetup(links) }} link={`${link?.[0]}/${link?.[1]}/${link?.[2]}`} />}
 
@@ -85,6 +85,9 @@ function Header() {
             </div>
           }
         </div>
+      </div>
+      <div onClick={() => setShowModal(false)} className='bg-red-100 h-screen w-full opacity-0 absolute'>
+        smhegfawhegf
       </div>
     </header>
   );
