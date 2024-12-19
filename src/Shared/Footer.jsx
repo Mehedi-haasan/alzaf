@@ -19,7 +19,7 @@ const Footer = () => {
                         <Image src={image} height={100} width={129} alt='fjghdius' className='h-[45px] w-[129px]' onClick={() => setShowModal(!showModal)} />
                     </div>
                     <div className="mt-">
-                        <h1 className="font-semibold text-xl py-2">See Our New Updates</h1>
+                        <h1 className="font-semibold text-xl py-2">See Our New Updates on this platform</h1>
                         <div className="flex gap-3">
                             <FacebookIcon />
                             <InstargamIcon />
